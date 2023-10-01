@@ -1,2 +1,2 @@
 # Walksy Client!
-bad cw that uses imgui
+bad 1.19.2 cw that uses imgui
