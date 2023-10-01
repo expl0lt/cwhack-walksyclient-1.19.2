@@ -1,0 +1,47 @@
+name: Update docs
+on:
+  push:
+    branches:
+      - '1.18.2'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Pull git
+        run: git pull
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+
+      - name: Generate features list
+        run: |
+          python3 scripts/populate_features.py
+        
+      - name: Update mod version
+        run: |
+          python3 scripts/populate_version.py
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Commit FEATURES.md
+        run: |
+          git add FEATURES.md
+          git commit -m "Auto-generate FEATURES.md"
+        continue-on-error: true
+      
+      # - name: Commit gradle.properties
+      #   run: |
+      #     git add gradle.properties
+      #     git commit -m "Auto-update mod version"
+      #   continue-on-error: true
+
+      - name: Push changes
+        run: git push
+        continue-on-error: true

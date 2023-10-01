@@ -1,0 +1,70 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.walksy.client.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  ],
+  "client": [
+    "client.ClientConnectionMixin",
+    "client.ClientPlayerEntityMixin",
+    "client.ClientPlayerInteractionManagerMixin",
+    "client.ClientPlayNetworkHandlerMixin",
+    "client.MinecraftClientMixin",
+    "client.KeyboardMixin",
+    "client.MouseMixin",
+    "client.ClientBrandRetrieverMixin",
+    "client.ParticleManagerMixin",
+    "client.AbstractClientPlayerEntityMixin",
+    "client.ClientWorldMixin",
+    "client.KeyBindingAccessor",
+    "client.CursorSlotMixin",
+    "client.ItemStackAccessor",
+    "client.ChunkOcclusionDataBuilderMixin",
+    "client.MinecraftClientAccessor",
+
+    "entity.PlayerEntityMixin",
+    "entity.EntityMixin",
+
+    "render.ChatHudMixin",
+    "render.HeldItemRendererMixin",
+    "render.WorldRendererMixin",
+    "render.BossBarHudMixin",
+    "render.BlockEntityRenderDispatcherMixin",
+    "render.BlockModelRendererMixin",
+    "render.BlockMixin",
+    "render.InGameHudMixin",
+    "render.GameRendererMixin",
+    "render.InGameOverlayRenderMixin",
+    "render.EntityRendererMixin",
+    "render.CameraMixin",
+    "render.RenderTickCounterMixin",
+    "render.SignBlockEntityRendererMixin",
+    "render.Matrix4fMixin",
+    "render.WorldRendererAccessor",
+    "render.BufferRendererAccessor",
+
+    "screen.MultiplayerScreenMixin",
+    "screen.DeathScreenMixin",
+    "screen.ScreenMixin",
+
+    "botch.PortalTypeMixin",
+    "botch.EntityMixin",
+    "botch.WorldMixin",
+    "botch.ClientInit",
+    "botch.FontManagerMixin",
+    "botch.InfChatMixin",
+    "botch.ProjectionUtilsMixin",
+    "botch.SimpleOptionMixin",
+
+
+
+    "botch.commandautofill.CommandSuggestorMixin",
+
+    "AbstractBlockStateMixin",
+    "WorldMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

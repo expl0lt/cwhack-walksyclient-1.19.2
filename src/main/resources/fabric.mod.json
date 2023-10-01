@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "walksy-client",
+  "version": "${version}",
+
+  "name": "Walksy Client",
+  "description": "We love Niggers",
+  "authors": [
+    "WalksyyVibess"
+  ],
+  "contact": {
+  },
+
+  "license": "GNU-3.0",
+  "icon": "assets/walksy-client/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.walksy.client.Main"
+    ]
+  },
+  "mixins": [
+    "walksy-client.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
